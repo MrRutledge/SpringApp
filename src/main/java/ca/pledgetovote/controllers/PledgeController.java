@@ -2,6 +2,7 @@ package ca.pledgetovote.controllers;
 
 import ca.pledgetovote.model.Pledge;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.http.HttpStatus;
 
 
 import java.util.ArrayList;
@@ -42,6 +43,12 @@ public class PledgeController {
         throw new IllegalArgumentException();
     }
 
-
-
+    // Create Exception Handle
+    @ResponseStatus(value = HttpStatus.BAD_REQUEST,
+            reason = "Request ID not found.")
+    @ExceptionHandler(IllegalArgumentException.class)
+    public void badIdExceptionHandler() {
+        // Nothing to do
+    }
 }
+
