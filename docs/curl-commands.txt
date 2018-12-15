@@ -8,6 +8,12 @@ curl -i -H "Content-Type: application/json" -X POST -d '{
      "statement": "I vote to change the world!"
      }' localhost:8080/pledges
 
+ # Add new pledge
+ curl -i -H "Content-Type: application/json" -X POST -d '{
+     "name": "Honest Hill",
+      "statement": "I vote to !"
+      }' localhost:8080/pledges
+
 # List all pledges
 curl -i -H "Content-Type: application/json" \
     -X GET localhost:8080/pledges
