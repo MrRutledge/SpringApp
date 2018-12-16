@@ -27,3 +27,9 @@ curl -i -H "Content-Type: application/json" -X POST -d '{
         "name": "Little Lucy",
         "statement": "I vote for the future!"
     }' localhost:8080/pledges/2
+
+# Change one pledge
+curl -i -H "Content-Type: application/json" -X POST -d '{
+        "name": "Little Lucy",
+        "statement": "I vote for the future!"
+    }' localhost:8080/pledges/2
