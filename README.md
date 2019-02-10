@@ -3,7 +3,7 @@
  API to encourage potential voters to register and pledge to vote. The API is built using Spring boot framework and 
  gradle.
  
- ####Tools
+ #### Tools
  **SpringBoot:** 1.5.10.\
  **Gradle:**  5.0\
  **IntelliJ**\
