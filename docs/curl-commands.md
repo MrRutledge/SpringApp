@@ -6,7 +6,7 @@ curl -i -H "Content-Type: application/json" -X GET localhost:8080/hello
 **Add new pledge**
 ```bash
 curl -i -H "Content-Type: application/json" -X POST -d '{
-    "name": "Honest Harry",
+    "name": "Random Guy",
      "statement": "I vote to change the world!"
      }' localhost:8080/pledges
 ```
@@ -35,14 +35,14 @@ curl -i -H "Content-Type: application/json" \
 **Change one pledge**
 ```bash
 curl -i -H "Content-Type: application/json" -X POST -d '{
-        "name": "Little Lucy",
+        "name": "Little Pray",
         "statement": "I vote for the future!"
     }' localhost:8080/pledges/2
 ```
 **Change one pledge**
 ```bash
 curl -i -H "Content-Type: application/json" -X POST -d '{
-        "name": "Little Lucy",
+        "name": "Little Pray",
         "statement": "I vote for the future!"
     }' localhost:8080/pledges/2
 ```
