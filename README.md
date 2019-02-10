@@ -1,17 +1,16 @@
 ## SpringApp API
 
  API to encourage potential voters to register and pledge to vote. The API is built using Spring boot framework and 
- gradle.
+ gradle. Clone the repo and play with it to see how it works, run it in your favorite IDE, test it with the requests below.
  
  #### Tools
- **SpringBoot:** 1.5.10.\
- **Gradle:**  5.0\
- **IntelliJ**\
- **Java:** 8
+ *SpringBoot:* 1.5.10.\
+ *Gradle:*  5.0\
+ *Java:* 8
  
- #### Get and Post commands to try out
+ #### Get and Post requests to try out in your bash terminal 
  
- **Read Hello:**
+ **Read Hello**
  ```bash
  curl -i -H "Content-Type: application/json" -X GET localhost:8080/hello
  ```
@@ -51,3 +50,5 @@
          "statement": "I vote for the future!"
      }' localhost:8080/pledges/2
  ```
+ 
+ **_Reference_**: Dr. B Fraser, Spring with Intellij. www.youtube.com/watch?v=he63dwZdhO
