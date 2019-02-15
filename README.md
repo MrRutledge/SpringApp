@@ -51,4 +51,7 @@
      }' localhost:8080/pledges/2
  ```
  
+ #### Possible usage
+ We can build a web app with similar functionality, just add a UI with a bit more functions and we get ourselves an app.  
+ 
  **_Reference_**: Dr. B Fraser, Spring with Intellij. www.youtube.com/watch?v=he63dwZdhO
