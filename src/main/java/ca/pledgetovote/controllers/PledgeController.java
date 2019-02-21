@@ -13,19 +13,19 @@ import java.util.concurrent.atomic.AtomicLong;
 @RequestMapping("pledges")
 public class PledgeController {
     private List<Pledge> pledges = new ArrayList<>();
-    private AtomicLong  nextId = new AtomicLong();
+    private AtomicLong nextId = new AtomicLong();
 
     @PostMapping
-    public Pledge createNewPledge(@RequestBody Pledge pledge){
+    public Pledge createNewPledge(@RequestBody Pledge pledge) {
         //set pledge to have next id
         pledge.setId(nextId.incrementAndGet());
         pledges.add(pledge);
-    return pledge;
+        return pledge;
     }
 
     @GetMapping
-    public List<Pledge> getAllPledges(){
-     return pledges;
+    public List<Pledge> getAllPledges() {
+        return pledges;
     }
 
     @GetMapping("/{id}")
