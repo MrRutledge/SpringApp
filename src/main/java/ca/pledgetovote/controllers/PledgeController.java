@@ -14,11 +14,6 @@ public class PledgeController {
     private List<Pledge> pledges = new ArrayList<>();
     private AtomicLong  nextId = new AtomicLong();
 
-    @GetMapping("/hello")
-    public String getHelloMessage(){
-        return "Hello Springers";
-    }
-
     @PostMapping("/pledges")
     public Pledge createNewPledge(@RequestBody Pledge pledge){
         //set pledge to have next id
