@@ -10,11 +10,12 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
 @RestController
+@RequestMapping("pledges")
 public class PledgeController {
     private List<Pledge> pledges = new ArrayList<>();
     private AtomicLong  nextId = new AtomicLong();
 
-    @PostMapping("/pledges")
+    @PostMapping
     public Pledge createNewPledge(@RequestBody Pledge pledge){
         //set pledge to have next id
         pledge.setId(nextId.incrementAndGet());
@@ -22,12 +23,12 @@ public class PledgeController {
     return pledge;
     }
 
-    @GetMapping("/pledges")
+    @GetMapping
     public List<Pledge> getAllPledges(){
      return pledges;
     }
 
-    @GetMapping("/pledges/{id}")
+    @GetMapping("/{id}")
     public Pledge getOnePledge(@PathVariable("id") long pledgeId) {
         for (Pledge pledge : pledges) {
             if (pledge.getId() == pledgeId) {
